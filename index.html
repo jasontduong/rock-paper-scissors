@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Page Title</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <script src="rockpaperscissor.js"></script>
+  <div class="header">JANKEN</div>
+  <div class="game">
+    <div class="result">
+      First to 5 wins.
+    </div>
+    <button class= disappear id="playagain" onclick="play(); restartGame();"> PLAY AGAIN
+    </button>
+    <div class="buttons">
+      <button id="rock" onclick="play()">ROCK</button>
+      <button id="paper" onclick="play()">PAPER</button>
+      <button id="scissor" onclick="play()">SCISSOR</button>
+    </div>
+    <div class="scorebox">
+      Score
+      <div class="score">
+        <div>Player
+          <div class="player">
+            0
+          </div>
+        </div>
+        <div>Ties
+          <div class="tie">
+            0
+          </div>
+        </div>
+        <div>Computer
+          <div class="computer">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    Copyright © The Foopa Corporation
+  </div>
+  <audio id="click" src="click.wav"></audio>
+  <script src="rockpaperscissor.js"></script>
 </body>
+
 </html>
