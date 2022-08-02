@@ -1,6 +1,7 @@
 # Minimalistic Rock Paper Scissors
-Completed as part of TheOdinProject.com MOOC.
+Completed as part of https://theodinproject.com/ curriculum.
 
-Playable @ https://jasontduong.github.io/rock-paper-scissors/
+Live Demo: https://jasontduong.github.io/rock-paper-scissors/
+
 
 
