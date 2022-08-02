@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <div class="result">
       First to 5 wins.
     </div>
-    <button class= disappear id="playagain" onclick="play(); restartGame();"> PLAY AGAIN
+    <button class=disappear id="playagain" onclick="play(); restartGame();"> PLAY AGAIN
     </button>
     <div class="buttons">
       <button id="rock" onclick="play()">ROCK</button>
@@ -44,9 +46,12 @@
       </div>
     </div>
   </div>
-  <div class="footer">
-    Copyright © The Foopa Corporation
-  </div>
+  <footer class="footer">
+    <p>Copyright 2022 © jasontduong</p>
+    <a href="https://github.com/jasontduong" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </footer>
   <audio id="click" src="click.wav"></audio>
   <script src="rockpaperscissor.js"></script>
 </body>

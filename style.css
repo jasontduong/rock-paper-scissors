@@ -50,6 +50,7 @@ body {
     justify-content: center;
     border-top: 1px solid #302f2f0c;
     font-size: 16px;
+    gap: 15px;
 }
 
 .game {
@@ -106,6 +107,16 @@ body {
 .computer,
 .tie {
     padding: 10px;
+}
+
+.fa-github {
+    color: #ddd;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
 }
 
 button {
@@ -192,7 +203,9 @@ button#scissor::after {
     background-color: var(--clr-neonscissor);
 }
 
-button#rock:hover, button#paper:hover, button#scissor:hover {
+button#rock:hover,
+button#paper:hover,
+button#scissor:hover {
     color: var(--clr-bg);
     text-shadow: none;
 }
