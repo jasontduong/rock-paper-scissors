@@ -4,7 +4,6 @@
     --clr-neonscissor: rgb(20, 114, 255);
     --clr-neonreplay: rgb(255, 20, 39);
     --clr-bg: rgb(33, 25, 25);
-
 }
 
 *,
@@ -22,8 +21,6 @@ body {
     background: var(--clr-bg);
     color: white;
     text-align: center;
-
-
 }
 
 .header {
@@ -62,6 +59,7 @@ body {
     flex-direction: column;
     flex: 1;
 }
+
 .scorebox {
     display: flex;
     flex-direction: column;
@@ -69,9 +67,8 @@ body {
     padding: 50px;
     gap: 50px;
     font-size: 25px;
-
-
 }
+
 .score {
     display: flex;
     flex-direction: row;
@@ -88,19 +85,19 @@ body {
     flex-direction: column;
     font-size: 30px;
     border: 10px double white;
- 
+
 }
 
 #playagain {
     margin: 50px;
 }
+
 .buttons {
     display: flex;
     gap: 30px;
     padding: 50px;
-
-
 }
+
 .disappear {
     display: none;
 }
@@ -109,10 +106,6 @@ body {
 .computer,
 .tie {
     padding: 10px;
-}
-
-button:active {
-    transform: translateY(4px);
 }
 
 button {
@@ -131,141 +124,75 @@ button {
     box-shadow: inset 0 0 0.5em 0 var(--clr-neonreplay), 0 0 0.5em 0 var(--clr-neonreplay);
 }
 
-button#rock {
-    font-size: 2rem;
-    font-family: inherit;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.3em 1em;
-    border-radius: 0.25em;
-    position: relative;
-    background-color: inherit;
-    color: var(--clr-neonrock);
-    border: var(--clr-neonrock) 0.125em solid;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-    box-shadow: inset 0 0 0.5em 0 var(--clr-neonrock), 0 0 0.5em 0 var(--clr-neonrock);
+button:active {
+    transform: translateY(4px);
 }
 
-
-
-button#rock::after {
+button::after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 2em 0.5em var(--clr-neonrock);
+    box-shadow: 0 0 2em 0.5em var(--clr-neonreplay);
     opacity: 0;
-    background-color: var(--clr-neonrock);
+    background-color: var(--clr-neonreplay);
     z-index: -1;
     transition: opacity 100ms linear;
 
 }
 
-
-button#rock:hover {
+button:hover {
     color: var(--clr-bg);
     text-shadow: none;
 }
 
-button#rock:hover::before,
-button#rock:focus::before {
+button:hover::before,
+button:focus::before {
     opacity: 1;
 }
 
-button#rock:hover::after {
+button:hover::after {
     opacity: 1;
+}
+
+button#rock {
+    color: var(--clr-neonrock);
+    border: var(--clr-neonrock) 0.125em solid;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neonrock), 0 0 0.5em 0 var(--clr-neonrock);
+}
+
+button#rock::after {
+    box-shadow: 0 0 2em 0.5em var(--clr-neonrock);
+    background-color: var(--clr-neonrock);
+
 }
 
 button#paper {
-    font-size: 2rem;
-    font-family: inherit;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.3em 1em;
-    border-radius: 0.25em;
-    position: relative;
-    background-color: inherit;
     color: var(--clr-neonpaper);
     border: var(--clr-neonpaper) 0.125em solid;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.5em 0 var(--clr-neonpaper), 0 0 0.5em 0 var(--clr-neonpaper);
 }
 
 
 button#paper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     box-shadow: 0 0 2em 0.5em var(--clr-neonpaper);
-    opacity: 0;
     background-color: var(--clr-neonpaper);
-    z-index: -1;
-    transition: opacity 100ms linear;
-}
-
-button#paper:hover {
-    color: var(--clr-bg);
-    text-shadow: none;
-}
-
-button#paper:hover::before,
-button#paper:focus::before {
-    opacity: 1;
-}
-
-button#paper:hover::after {
-    opacity: 1;
 }
 
 button#scissor {
-    font-size: 2rem;
-    font-family: inherit;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.4em 1em;
-    border-radius: 0.25em;
-    position: relative;
-    background-color: inherit;
     color: var(--clr-neonscissor);
     border: var(--clr-neonscissor) 0.125em solid;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.5em 0 var(--clr-neonscissor), 0 0 0.5em 0 var(--clr-neonscissor);
 }
 
-
-
 button#scissor::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     box-shadow: 0 0 2em 0.5em var(--clr-neonscissor);
-    opacity: 0;
     background-color: var(--clr-neonscissor);
-    z-index: -1;
-    transition: opacity 1ms linear;
 }
 
-button#scissor:hover {
+button#rock:hover, button#paper:hover, button#scissor:hover {
     color: var(--clr-bg);
     text-shadow: none;
-}
-
-button#scissor:hover::before,
-button#scissor:focus::before {
-    opacity: 1;
-}
-
-button#scissor:hover::after {
-    opacity: 1;
 }
